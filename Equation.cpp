@@ -24,28 +24,9 @@ int main(int argc, char *argv[])
     cin.tie(0);
     ios::sync_with_stdio(false);
 
-    int q;
-    cin >> q;
+    ll n;
+    cin >> n;
 
-    vector<int> a(q), b(q), n(q), S(q);
-    rep (i, q) {
-        cin >> a[i] >> b[i] >> n[i] >> S[i];
-    }
-
-    rep (i, q) {
-        if (a[i]*n[i]+b[i] < S[i]) {
-            No;
-            continue;
-        }
-        if (S[i]%a[i] == 0 && S[i]/a[i] <= n[i]) {
-            YES;
-            continue;
-        }
-        if (S[i]%n[i] <= b[i]) {
-            YES;
-            continue;
-        }
-        NO;
-    }
+    cout << n+1 << " " << 1 << endl;
     return 0;
 }
